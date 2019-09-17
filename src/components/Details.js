@@ -1,4 +1,5 @@
 import React from "react";
+import Spinner from "./Spinner";
 
 class Details extends React.Component {
   state = {
@@ -33,7 +34,11 @@ class Details extends React.Component {
   };
   render() {
     if (this.state.detailsData === null) {
-      return <div>Loading...</div>;
+      return (
+        <>
+          <Spinner />
+        </>
+      );
     } else {
       return (
         <div className="container">

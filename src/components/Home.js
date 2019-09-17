@@ -1,5 +1,6 @@
 import React from "react";
 import Row from "./Row";
+import Spinner from "./Spinner";
 class Home extends React.Component {
   state = {
     initialState: null,
@@ -42,7 +43,11 @@ class Home extends React.Component {
   };
   render() {
     if (this.state.initialState === null) {
-      return <div>Loading...</div>;
+      return (
+        <>
+          <Spinner />
+        </>
+      );
     } else {
       //console.log(this.state);
       return (
