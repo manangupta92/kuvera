@@ -13,7 +13,7 @@ This app will show a simple table with sorting, filtering and navigational capab
 ## Following are the testable features of this app
 
 - You will view only the top 100 mutual funds.
-- Clicking on the header of table columns will sort the items in alphabetical order for the first 4.
+- Clicking on the header of table columns will sort the items in alphabetical order for the first 4 and clicking on returns will sort the records in descending order.
 - You can search the entire mutual funds json from the text box provided as you type. However, only the top 100 records matching the search criteria will be shown.
 - Clicking on any mutual fund will navigate to its details page showing all its key-value pairs.
 - `Go back` button at the end of details page will navigate back to list of MFs.

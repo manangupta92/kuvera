@@ -14,7 +14,6 @@ class Details extends React.Component {
   };
   componentDidMount() {
     this._asyncDetailsRequest = this.loadDetailsData().then(detailsData => {
-      console.log(detailsData);
       this._asyncRequest = null;
       this.setState({ detailsData });
     });

@@ -8,13 +8,21 @@ class Home extends React.Component {
   };
   compareBy = key => {
     return function(a, b) {
-      if (a[key] < b[key]) return -1;
-      if (a[key] > b[key]) return 1;
-      return 0;
+      debugger;
+      if (key === "year_1" || key === "year_3") {
+        if (a.returns[key] < b.returns[key]) return 1;
+        if (a.returns[key] > b.returns[key]) return -1;
+        return 0;
+      } else {
+        if (a[key] < b[key]) return -1;
+        if (a[key] > b[key]) return 1;
+        return 0;
+      }
     };
   };
 
   sortBy = key => {
+    debugger;
     var arrayCopy = [...this.state.initialState];
     arrayCopy.sort(this.compareBy(key));
     this.setState({ funds: arrayCopy });
@@ -89,8 +97,20 @@ class Home extends React.Component {
                 >
                   Plan
                 </th>
-                <th>Year 1 Returns</th>
-                <th>Year 3 Returns</th>
+                <th
+                  onClick={e => {
+                    this.sortBy("year_1");
+                  }}
+                >
+                  Year 1 Returns
+                </th>
+                <th
+                  onClick={e => {
+                    this.sortBy("year_3");
+                  }}
+                >
+                  Year 3 Returns
+                </th>
               </tr>
             </thead>
             <tbody>
