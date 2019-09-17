@@ -36,9 +36,9 @@ class Details extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <>
+        <div className="container">
           <h2>Details of Mutual Fund</h2>
-          <table>
+          <table className="striped">
             <thead>
               <tr>
                 <th>Key</th>
@@ -51,7 +51,7 @@ class Details extends React.Component {
           <h3>
             <a href="/">Go back</a>
           </h3>
-        </>
+        </div>
       );
     }
   }

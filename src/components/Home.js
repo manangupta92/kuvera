@@ -46,14 +46,14 @@ class Home extends React.Component {
     } else {
       //console.log(this.state);
       return (
-        <>
+        <div className="container">
           <h1>Kuvera Mutual funds</h1>
           <input
             className="search-input"
             placeholder="Search Mutual Funds..."
             onChange={this.handleChange}
           ></input>
-          <table className="container highlight">
+          <table className="striped">
             <thead>
               <tr>
                 <th
@@ -92,7 +92,7 @@ class Home extends React.Component {
               <Row funds={this.state.funds} />
             </tbody>
           </table>
-        </>
+        </div>
       );
     }
   }
